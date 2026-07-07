@@ -1,1 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOVAXUE • Доступ к каналу</title>
+    <style>
+        :root {
+            --bg-color: #16191f; 
+            --neon-cyan: #00f3ff; 
+            --neon-glow: 0 0 15px rgba(0, 243, 255, 0.6), 0 0 30px rgba(0, 243, 255, 0.3);
+            --card-bg: #1f242d;
+            --text-color: #ffffff;
+            --text-muted: #94a3b8;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            text-align: center;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar-wrapper {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--neon-cyan);
+            box-shadow: var(--neon-glow);
+        }
+
+        .avatar-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .official-badge {
+            font-size: 12px;
+            color: var(--neon-cyan);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+        }
+
+        .btn-telegram {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            background-color: transparent;
+            color: var(--text-color);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: var(--neon-glow);
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .btn-telegram:hover {
+            background-color: var(--neon-cyan);
+            color: #000000;
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.8);
+        }
+
+        .cards-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            transition: border 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--neon-cyan);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-new {
+            background-color: var(--neon-cyan);
+            color: #000000;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .card-body {
+            font-size: 15px;
+        }
+
+        .bonus-highlight {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--neon-cyan);
+            margin-top: 4px;
+            text-shadow: 0 0 5px rgba(0, 243, 255, 0.3);
+        }
+
+        .btn-card-action {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--neon-cyan);
+            color: #000000;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn-card-action:hover {
+            opacity: 0.9;
+        }
+
+        .vpn-header-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .vpn-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: #ffffff;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vpn-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .vpn-title-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vpn-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .vpn-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .vpn-tag {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 10px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="avatar-wrapper">
+                <img alt="GEOVAXUE" src="avaf.jpg">
+            </div>
+            <h1>GEOVAXUE</h1>
+            <div class="official-badge">ОФИЦИАЛЬНЫЙ КАНАЛ</div>
+        </div>
+
+        <!-- Main Action Button -->
+        <a href="https://t.me/anartgbot?start=019defd9-bc94-7685-82e9-9b9b3b59a201" rel="noreferrer noopener" target="_blank" class="btn-telegram">
+            📢 ПЕРЕЙТИ В TELEGRAM
+        </a>
+
+        <!-- Cards Section -->
+        <div class="cards-section">
+            <!-- Card 1: Luckybear -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">🔥 LUCKYBEAR</span>
+                    <span class="badge-new">Новинка!</span>
+                </div>
+                <div class="card-body">
+                    <div>Приветственный бонус</div>
+                    <div class="bonus-highlight">360% + 250 FS</div>
+                </div>
+                <a href="https://maxgame555.xyz/8IFUuZ" rel="noreferrer noopener" target="_blank" class="btn-card-action">
+                    🚀 ЗАБРАТЬ БОНУС
+                </a>
+            </div>
+
+            <!-- Card 2: Amnezia VPN -->
+            <div class="card">
+                <div class="vpn-header-block">
+                    <div class="vpn-logo">
+                        <img alt="Amnezia" src="https://amnezia.org/favicon.ico">
+                    </div>
+                    <div class="vpn-title-text">
+                        <span class="card-title" style="font-size:16px;">Amnezia VPN</span>
+                        <span class="vpn-subtitle">Обходит блокировки, работает везде</span>
+                    </div>
+                </div>
+                <div class="vpn-tags">
+                    <span class="vpn-tag">⚡ Высокая скорость</span>
+                    <span class="vpn-tag">🔓 Open source</span>
+                    <span class="vpn-tag">🛡️ Нет логов</span>
+                </div>
+                <a href="https://storage.googleapis.com/amnezia/amnezia.org?m-path=premium&amp;arf=ZCHZ8WMP11JRCMSN" rel="noreferrer noopener" target="_blank" class="btn-card-action">
+                    🔓 СКАЧАТЬ Amnezia VPN
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            GEOVAXUE • Доступ к каналу
+        </footer>
+    </div>
+
+</body>
+</html>
