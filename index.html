@@ -231,20 +231,58 @@
         }
 
         .casino-item.spinto {
-            background: radial-gradient(circle at 10% 20%, #3d0b14, #17070b);
-            border: 1px solid #e34a5b;
-            box-shadow: 0 0 25px rgba(227,74,91,.28);
+            background: radial-gradient(circle at 10% 20%, #071a3d, #070b17);
+            border: 1px solid #4a8fe3;
+            box-shadow: 0 0 25px rgba(74, 143, 227, .28);
             animation: pulseGlow 2s infinite;
         }
 
         @keyframes pulseGlow {
-            0% { box-shadow: 0 0 5px rgba(227,74,91,.28); border-color: #e34a5b; }
-            50% { box-shadow: 0 0 25px rgba(255,107,129,.55); border-color: #ff8a98; }
-            100% { box-shadow: 0 0 5px rgba(227,74,91,.28); border-color: #e34a5b; }
+            0% { box-shadow: 0 0 5px rgba(74, 143, 227, .28); border-color: #4a8fe3; }
+            50% { box-shadow: 0 0 25px rgba(107, 168, 255, .55); border-color: #8ab8ff; }
+            100% { box-shadow: 0 0 5px rgba(74, 143, 227, .28); border-color: #4a8fe3; }
+        }
+
+        .casino-item.gold-norm {
+            margin-top: 18px;
+            background: radial-gradient(circle at 10% 20%, #3d2a07, #171007);
+            border: 1px solid #e3ad4a;
+            box-shadow: 0 0 25px rgba(255, 190, 60, .28);
+            animation: goldPulseGlow 2s infinite;
+        }
+
+        @keyframes goldPulseGlow {
+            0% { box-shadow: 0 0 5px rgba(255, 190, 60, .28); border-color: #e3ad4a; }
+            50% { box-shadow: 0 0 25px rgba(255, 196, 90, .55); border-color: #ffd27a; }
+            100% { box-shadow: 0 0 5px rgba(255, 190, 60, .28); border-color: #e3ad4a; }
+        }
+
+        .casino-item.gold-norm .casino-name {
+            background: linear-gradient(115deg, #fff0b3, #ffb52e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        .casino-item.gold-norm .badge-new {
+            background: rgba(227, 173, 74, .15);
+            color: #fff0b3;
+            border: 1px solid #e3ad4a;
+        }
+
+        .casino-item.gold-norm .bonus-text {
+            color: #fff0b3;
+        }
+
+        .casino-item.gold-norm .action-btn {
+            background: linear-gradient(95deg, #ffca4a, #e39a1f);
+            box-shadow: 0 6px 14px rgba(255,190,60,.35);
         }
 
         .casino-item.spinto .casino-name {
-            background: linear-gradient(115deg, #ffb3bc, #ff5e73);
+            background: linear-gradient(115deg, #b3d5ff, #5e9fff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -254,9 +292,9 @@
 
         .badge-new {
             font-size: 11px;
-            background: rgba(227,74,91,.15);
-            color: #ffb3bc;
-            border: 1px solid #e34a5b;
+            background: rgba(74, 143, 227, .15);
+            color: #b3d5ff;
+            border: 1px solid #4a8fe3;
             padding: 5px 14px;
             border-radius: 60px;
             font-weight: 600;
@@ -266,7 +304,7 @@
             font-size: 28px;
             font-weight: 800;
             margin: 12px 0 8px;
-            color: #ffb3bc;
+            color: #b3d5ff;
         }
 
         .bonus-text span {
@@ -308,9 +346,9 @@
             font-size: 17px;
             margin-top: 12px;
             transition: 0.2s;
-            background: linear-gradient(95deg, #e34a5b, #b81f45);
+            background: linear-gradient(95deg, #4a8fe3, #1f5fb8);
             color: white;
-            box-shadow: 0 6px 14px rgba(227,74,91,.35);
+            box-shadow: 0 6px 14px rgba(74,143,227,.35);
         }
 
         .action-btn:active {
@@ -344,38 +382,32 @@
         <div class="casino-grid">
             <div class="casino-item spinto">
                 <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 12px;">
-                    <span class="casino-name">🔥 NORM</span>
-                    <span class="badge-new">Новый проект!</span>
+                    <span class="casino-name">🔥 UP-X</span>
+                    <span class="badge-new">VIP!</span>
                 </div>
                 <div class="bonus-text">
-                    <div style="font-size:14px;color:#8e99b3;margin-bottom:6px;">Приветственный бонус</div>225% + 1000 FS
+                    <div style="font-size:14px;color:#8e99b3;margin-bottom:6px;">Приветственный бонус</div>300% + 750 FS
                 </div>
                
-                <a href="https://lucksprint.com/?serial=61360166&creative_id=7675" class="action-btn" target="_blank" rel="noreferrer noopener">
+                <a href="https://famecpa.trk2afse.com/click?pid=2133&offer_id=3076" class="action-btn" target="_blank" rel="noreferrer noopener">
                     🚀 ЗАБРАТЬ БОНУС
                 </a>
             </div>
         </div>
 
-        <div class="vpn-modern">
-            <div class="vpn-row">
-                <div class="vpn-icon">
-                    <img src="https://amnezia.org/favicon.ico" alt="Amnezia">
+        <div class="casino-item gold-norm">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 12px;">
+                    <span class="casino-name">👑 FARO</span>
+                    <span class="badge-new">Новый проект!</span>
                 </div>
-                <div>
-                    <div class="vpn-title">Amnezia VPN</div>
-                    <div class="vpn-desc">Обходит блокировки, работает везде</div>
+                <div class="bonus-text">
+                    <div style="font-size:14px;color:#8e99b3;margin-bottom:6px;">Приветственный бонус</div>333% + 1111 FS
                 </div>
+
+                <a href="https://combowin.site/aezcjezehy" class="action-btn" target="_blank" rel="noreferrer noopener">
+                    🚀 ЗАБРАТЬ БОНУС
+                </a>
             </div>
-            <div class="tags">
-                <span class="tag">⚡ Высокая скорость</span>
-                <span class="tag">🔓 Open source</span>
-                <span class="tag">🛡️ Нет логов</span>
-            </div>
-            <a href="https://storage.googleapis.com/amnezia/amnezia.org?m-path=premium&amp;arf=ZCHZ8WMP11JRCMSN" class="vpn-action" target="_blank" rel="noreferrer noopener">
-                🔓 СКАЧАТЬ Amnezia VPN
-            </a>
-        </div>
     </div>
 
     <div class="footer">
